@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 375px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+body::after {
+  content: url(./images/bg-pattern-top-mobile.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body::before {
+  content: url(./images/bg-pattern-bottom-mobile.svg);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} 
+
+.header {
+  width: 100%;
+}
+
+.header__title h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 2.5em 1em 1em 1em;
+  color: hsl(300, 43%, 22%);
+  letter-spacing: -2px;
+}
+
+.header__title p {
+  margin: 1em;
+  color: hsl(303, 10%, 53%);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+.container__review {
+  width: 100%;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+
+.review {
+  height: 82px;
+  margin: 1em 1.5rem;
+  background-color: hsl(300, 24%, 96%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.review h2 {
+  color: hsl(300, 43%, 22%);
+}
+.stars {
+  width: 46%;
+  display: flex;
+  justify-content: space-evenly;
+  color: rgba(212, 139, 29, 0.68);
+  font-size: 1.1rem;
+}
+
+.card__container {
+  height: 890px;
+  margin: 1em 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card {
+  height: 280px;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 7px;
+  padding: 1em 1rem;
+  margin-bottom: 0.5rem;
+}
+.card__header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 100px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card__title h3 {
+  color: hsl(0, 0%, 100%);
+  padding: 0.4em 0;
+}
+
+.card__title h4 {
+  color: hsl(333, 80%, 67%);
+  font-weight: 400;
+}
+
+.card img {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+.card p {
+  color: hsl(0, 0%, 100%);
+  line-height: 23px;
+  font-size: 0.9rem;
+  margin: 0.7rem;
+}
+
+/* ------------DESKTOP--------------*/
+
+@media (min-width: 376px) {
+  body {
+    max-width: 1440px;
+    min-height: 50vh;
+  }
+
+  body::after {
+    content: url(./images/bg-pattern-top-mobile.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  body::before {
+    content: url(./images/bg-pattern-bottom-mobile.svg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  } 
+  
+
+  .header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .header__title {
+    width: 466px;
+    height: 245px;
+    margin: 8rem 4.5rem 6rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .header__title h1 {
+    font-size: 3rem;
+    text-align: inherit;
+    margin: 0 0 .8rem 0;
+  }
+
+  .header__title p {
+    margin: 0;
+    text-align: start;
+    width: 460px;
+    height:90px;
+  }
+
+  .container__review {
+    height: 252px;
+    margin-right: 8rem;
+  }
+
+  .review {
+    width: 542px;
+    height:55px;
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .review:nth-child(0n+2){
+    margin-left: 5rem;
+  }
+
+  .review:nth-child(0n+3){
+    margin-left: 8.5rem;
+  }
+
+  .stars {
+    width: 280px;
+    margin-right: 2rem;
+  }
+
+  .review h2 {
+    width: 418px;
+    margin-right: 4rem;
+  }
+
+  .card__container {
+    flex-direction: row;
+    justify-content: space-between;
+    height:310px;
+    margin: 0 8rem;
+  }
+
+  .card {
+    width: 354px;
+    height: 264px;
+  }
+
+  .card:nth-child(0n+2) {
+    margin-top: 1.2rem;
+  }
+
+  .card:nth-child(0n+3) {
+    margin-top: 2.4rem;
+  }
+}
